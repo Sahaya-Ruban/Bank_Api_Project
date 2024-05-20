@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .index{
+            text-align: center;
+            margin-top: 5rem;
+        }
+        .index a{
+            color: white;
+            text-decoration: none;
+            font-size: 2rem;
+            border: 1px solid black;
+            padding: .5rem 1rem;
+            background-color: green;
+        }
+
+        .index2{
+            margin-left: 1rem;
+        }
+
+        h1{
+            color: white;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Details</h1>
+
+<div class="index">
+       
+    <a href="{{url_for('login')}}" class="index1">Login</a>
+    <a href="{{url_for('signin')}}" class="index2">signin</a>
+</div>
+
+
+<h2>Welcome</h2>
+</body>
+</html>

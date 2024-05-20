@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-color: black;
+}
+
+    table,th,td{
+        border: 1px solid white;
+        border-collapse: collapse;
+        margin-top: 5rem;
+        margin-left: 10rem;
+    }
+
+    th,td{
+        padding: 1rem;
+        text-align: center;
+        color: white;
+    }
+
+    td a{
+        text-decoration: none;
+        color: white;
+    }
+
+    nav{
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    nav a{
+        text-decoration: none;
+        border: 1px solid;
+        padding: .5rem 1rem;
+        align-items: center;
+        color: white;
+        font-size: 1.1rem;
+        background-color: blue;
+    }
+</style>
+<body>
+    <nav>
+        <a href="{{url_for('add')}}" class="btn btn-success">Add Data</a>
+        <a href="{{url_for('logout')}}" class="btn btn-success">Logout</a>
+    </nav>
+    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Fund Name</th>
+            <th>Invested Amount</th>
+            <th>Units Held</th>
+            <th>Nav</th>
+            <th>Current Value</th>
+            <th>Growth</th>
+            <th colspan="2">Action</th>
+        </tr>
+        {%for details in data1%}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{details[1]}}</td>
+            <td>{{details[2]}}</td>
+            <td>{{details[3]}}</td>
+            <td>{{details[4]}}</td>
+            <td>{{details[5]}}</td>
+            <td>{{details[6]}}</td>
+            <td>{{details[7]}}</td>
+            <td><a href="{{url_for('edit',id=details[0])}}">Edit</a></td>
+            <td><a href="{{url_for('delete',id=details[0])}}">Delete</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>

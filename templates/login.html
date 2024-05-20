@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    .login{
+        background-color: aqua;
+        width: 52%;
+        height: 23rem;
+        text-align: center;
+        margin-left: 15rem;
+        margin-top: 3rem;
+        border-radius: 3%;
+    }
+    .login:hover{
+        background-color: aqua;
+    }
+    h1{
+        padding-top: 1rem;
+        color: black;
+    }
+   table{
+    margin-top: 2rem;
+    margin-left: 9rem;
+   }
+   table tr td{
+    padding: 1rem;
+    color: black;
+    text-align: center;
+    font-size: 1.4rem;
+   }
+   .pass input{
+    font-size: 1.3rem;
+    border-color: aqua;
+   }
+   .pass input:hover{
+    color: black;
+    background-color: green;
+   }
+
+   .pass a{
+    text-decoration: none;
+    border: 1px solid aqua;
+    padding: .5rem;
+    color: black;
+    background-color: gray;
+   }
+</style>
+<body>
+    <div class="login">
+        <h1>Login</h1>
+    
+        <div class="col-4 mx-auto">
+            <form action="" method="post">
+                {{form.hidden_tag()}}
+                <table>
+                    <tr>            
+                        <td>{{form.username.label}}</td>
+                        <td>{{form.username()}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{form.password.label}}</td>
+                        <td>{{form.password()}}</td>
+                    </tr>
+                    <tr class="pass">
+                        <td><input type="submit" value="Login"></td>
+                        <td><a href="{{url_for('signin')}}" class="btn btn-success">Sign In</a></td>
+                    </tr>
+                </table>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

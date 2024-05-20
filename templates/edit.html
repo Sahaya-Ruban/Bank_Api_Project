@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one input{
+            width: 15rem;
+            margin-left: 1rem;
+        }
+    
+        .sub input:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td><label for="Fund_code">Fund Code:</label></td>
+                <td class="one"><input type="number" name="Fund_code" value="{{data2}}" placeholder="Enter Fund Code"></td>
+            </tr>
+            <tr>
+                <td class="sub"><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

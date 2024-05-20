@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    .signin{
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        width: 50%;
+        height: 20rem;
+        text-align: center;
+        margin-left: 15rem;
+        margin-top: 3rem;
+        border-radius: 3%;
+    }
+    h1{
+        padding-top: 1rem;
+    }
+   table{
+    margin-top: 2rem;
+    margin-left: 9rem;
+   }
+   table tr td{
+    padding: 1rem;
+    font-size: 1.4rem;
+   }
+   .submit input{
+    font-size: 1.2rem;
+   }
+   .submit input:hover{
+    background-color: green;
+   }
+</style>
+<body>
+    <div class="signin">
+        <h1>Signin</h1>
+    
+        <div class="col-4 mx-auto">
+            <form action="" method="post">
+                {{form.hidden_tag()}}
+                <table>
+                    <tr>            
+                        <td>{{form.username.label}}</td>
+                        <td>{{form.username()}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{form.password.label}}</td>
+                        <td>{{form.password()}}</td>
+                    </tr>
+                    <tr class="submit">
+                        <td><input type="submit" value="Submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
